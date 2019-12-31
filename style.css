@@ -4,15 +4,33 @@
 	border: 0;
 	box-sizing: border-box;
 	/* overflow: hidden; */
+	/* background-color: #ccc; */
 }
+
+
 
 body {
 	background-color: #919171 ;
 	
 	min-height: 100%;
-	background-color: #cccccc;
+	background-color: #fff;
 	position: relative;
 	/* overflow: hidden; */
+	min-width: 300px;
+	/* visibility: hidden;  */
+	/* visibility: visible; */
+	/* display: contents; */
+}
+
+#prel{
+	position: absolute;
+	top: 50vh;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+#load{
+	display: none;
 }
 
 header {
@@ -39,22 +57,15 @@ header {
 header h1{
 	/*padding-left: 2%;*/
 	display: inline-block;
-	width: 100%;
-	/* padding-right: 5%;  */
-	/* margin-left: 30px; */
-	
-	
-	
-	
+	width: 100%;	
 }
 
 #port{
 	display: block;
-	min-width: fit-content;
+	/* width: 2%; */
+	/* min-width: fit-content; */
 	left: 7%;
 	position: relative;
-	/* transform: translate(-50%,-50%); */
-	max-width: 50px;
 }
 
 
@@ -92,20 +103,13 @@ header button li{
 	grid-template-columns: 25% 75%;
 	/* grid-auto-rows: 525px; */
 	grid-gap: 0;
-	/* background-image: url("123.jpg");
-	background-repeat: no-repeat;
-	
-	background-color: #cccccc;
-	background-size: cover; */
-	
 	position: relative;
 	background-image: url("123.jpg");
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
-	width: 100%;
-	/* z-index: -3; */
 	overflow: hidden;
+	width: 100%;
 	height: 100%;
 	
 }
@@ -118,14 +122,10 @@ header button li{
 	left: 0;
 	right: 0;
     bottom: 0;
-    /* width: 100%; */
-    /* height: 100%; */
     background-image: url(12345.jpg);
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
-	/* background-size: auto; */
-	/* width: 100; */
 	z-index: 10;
 	/* animation-name: enter;
 	animation-duration: 2s; */
@@ -137,16 +137,14 @@ header button li{
 }
 
 .open{
-	position: fixed;
-	top: 315px; 
+	position: relative;
+	top: 45vh; 
 	width: 300px;
 	text-align: center;
-	/* -ms-transform: translateY(-50%);  */
-	transform: translate(-50% , -50%);
+	transform: translate(-50%,-50%);
 	left: 50%;
 	color: rgb(231, 216, 216);
 	font-size: 1.6em;
-	/* background: inherit; */
 	box-shadow: 2px 2px 0.8rem 0 rgba(0, 0, 0, 1);
 	padding: 2%;
 	border-radius: 9px;
@@ -166,7 +164,6 @@ header button li{
 	border-radius: 9px;
 	transition: transform 0.2s;
 	
-	
 }
 
 .home button {
@@ -183,7 +180,7 @@ header button li{
 	
 	overflow: hidden;
 	text-overflow: ellipsis; 
-	animation-name: example;
+	/* animation-name: example; */
 	/* transform: translateX(-50%); */
 	left: 50%;
 	margin-top: 20px;
@@ -199,10 +196,10 @@ button:hover {
 }
 
 
-@keyframes example{
+/* @keyframes example{
 	0% {opacity: 0; top:80%;}
 	100% {opacity: 1; top: 90%;}
-}
+} */
 
 
 .item{
@@ -515,15 +512,15 @@ footer p{
 	text-align: right;
 }
 
-@media screen and (min-width: 1238){
+@media screen and (min-width: 1238px){
 	.open{
 		animation-name: opa;
 		animation-duration: 1s;
 	}
 
 	@keyframes opa{
-		from {top:200px; opacity: 0;}
-		to {top: 315px; opacity: 1;}
+		from {top:35vh; opacity: 0;}
+		to {top: 45vh; opacity: 1;}
 	}
 }
 
@@ -533,7 +530,18 @@ footer p{
 		display: none;
 	}
 
+	.open{
+		animation-name: opa;
+		animation-duration: 1s;
+	}
+
+	@keyframes opa{
+		from {top:35vh; opacity: 0;}
+		to {top: 45vh; opacity: 1;}
+	}
 }
+
+
 
 @media only screen and (max-width: 800px){
 
@@ -550,20 +558,19 @@ footer p{
 	}
 
 	.open{
-		top:290px;
+		top:45vh;
 		width: 100%;
 		animation-name: opa;
 		animation-duration: 1s;
 	}
 
 	@keyframes opa{
-		from {top:200px; opacity: 0;}
-		to {top: 290px; opacity: 1;}
+		from {top:35vh; opacity: 0;}
+		to {top: 45vh; opacity: 1;}
 	}
 
 	
 	.grid-container{
-		/* grid-template-columns: 1fr; */
 		display: block;
 	}
 

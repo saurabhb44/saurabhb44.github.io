@@ -19,5 +19,11 @@ function runEvent(e){
 function alertFunc() {
     home.parentNode.removeChild(home);
 }
+window.onload = function() {load()};
 
-// document.querySelector('.fa-envelope').addEventListener('click', myFunction );
+function load(){
+    document.body.querySelector('#prel').style.display = 'none';
+    document.body.querySelector('#load').style.display = 'contents';
+}
+
+
