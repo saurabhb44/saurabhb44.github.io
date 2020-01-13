@@ -6,6 +6,9 @@ home.querySelector('button').addEventListener('click', runEvent);
 function runEvent(e){
     
     e.preventDefault();
+
+    document.body.querySelector('.item').style.display = 'unset';
+    document.body.querySelector('.item1').style.display = 'unset';
     
     home.style.animation = 'enter 0.5s';
 
